@@ -15,18 +15,19 @@
 
 ## 📋 Table of Contents
 
-- [Overview](#-overview)
-- [How It Works](#-how-it-works)
-- [Project Structure](#-project-structure)
-- [Architecture](#-architecture)
-- [Hyperparameters](#-hyperparameters)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Training Details](#-training-details)
-- [Dependencies](#-dependencies)
+- [Overview](#overview)
+- [How It Works](#how-it-works)
+- [Project Structure](#project-structure)
+- [Architecture](#architecture)
+- [Hyperparameters](#hyperparameters)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Training Details](#training-details)
+- [Dependencies](#dependencies)
 
 ---
 
+<a id="overview"></a>
 ## 🧠 Overview
 
 This project implements a **Deep Q-Network (DQN)** reinforcement learning agent that learns to play the classic Flappy Bird game autonomously. The agent interacts with the [`flappy-bird-gymnasium`](https://github.com/markub3327/flappy-bird-gymnasium) environment and learns a control policy entirely from raw game state observations — no human demonstrations required.
@@ -41,6 +42,7 @@ Key features of this implementation:
 
 ---
 
+<a id="how-it-works"></a>
 ## ⚙️ How It Works
 
 The agent follows the standard **DQN algorithm**:
@@ -60,6 +62,7 @@ The **Policy Network** is updated every step, while the **Target Network** is sy
 
 ---
 
+<a id="project-structure"></a>
 ## 📁 Project Structure
 
 ```
@@ -78,6 +81,7 @@ RL-Agent-Playing-Flappy-Bird-Game/
 
 ---
 
+<a id="architecture"></a>
 ## 🏗️ Architecture
 
 ### DQN Model (`dqn.py`)
@@ -107,6 +111,7 @@ A fixed-capacity **double-ended queue (deque)** that stores transitions `(state,
 
 ---
 
+<a id="hyperparameters"></a>
 ## 🎛️ Hyperparameters
 
 Configured via `parameters.yaml`:
@@ -125,6 +130,7 @@ Configured via `parameters.yaml`:
 
 ---
 
+<a id="installation"></a>
 ## 🛠️ Installation
 
 ### 1. Clone the Repository
@@ -152,6 +158,7 @@ pip install torch gymnasium flappy-bird-gymnasium pygame pyyaml
 
 ---
 
+<a id="usage"></a>
 ## 🚀 Usage
 
 ### 🎓 Train the Agent
@@ -184,6 +191,7 @@ Launches the game in human-playable mode. Press **Space** to flap, **Q** / close
 
 ---
 
+<a id="training-details"></a>
 ## 📊 Training Details
 
 - **State Space**: 12 continuous features (bird position, velocity, pipe distances, etc.) from the `FlappyBird-v0` environment with LIDAR disabled
@@ -193,6 +201,7 @@ Launches the game in human-playable mode. Press **Space** to flap, **Q** / close
 
 ---
 
+<a id="dependencies"></a>
 ## 📦 Dependencies
 
 | Package | Purpose |
